@@ -1,0 +1,101 @@
+ID,Age,Salary,Occupation,Location,Diseases
+1,29,56000,Nurse,Los Angeles,Disease6|Disease3
+2,30,60657,Scientist,Los Angeles,Disease4|Disease6|Disease7
+3,24,91669,Nurse,Boston,Disease5|Disease4|Disease3
+4,50,70307,Teacher,Los Angeles,Disease5|Disease3
+5,46,57441,Teacher,San Diego,Disease2|Disease4|Disease5
+6,56,62343,Nurse,Miami,Disease4|Disease1|Disease5
+7,28,99542,Nurse,Chicago,Disease4|Disease7
+8,24,94819,Nurse,New York,Disease4|Disease5|Disease3|Disease6
+9,21,98932,Engineer,Miami,Disease3|Disease5|Disease2
+10,34,60243,Scientist,Boston,Disease4|Disease7|Disease1
+11,21,96799,Doctor,Houston,Disease1|Disease6|Disease4|Disease3
+12,45,86975,Teacher,New York,Disease4|Disease6|Disease1|Disease5
+13,36,44082,Doctor,San Diego,Disease1|Disease5|Disease6
+14,34,40577,Nurse,Houston,Disease4|Disease7|Disease1|Disease2
+15,50,52659,Teacher,Boston,Disease5|Disease1
+16,58,41857,Doctor,San Diego,Disease5|Disease4
+17,52,42903,Teacher,San Diego,Disease1|Disease5
+18,43,62311,Doctor,Houston,Disease3|Disease5|Disease7|Disease4
+19,59,56224,Lawyer,Los Angeles,Disease4|Disease6
+20,54,75542,Artist,San Diego,Disease2|Disease5
+21,44,57582,Nurse,Chicago,Disease2|Disease4|Disease5|Disease7
+22,58,49115,Nurse,New York,Disease7|Disease1|Disease6|Disease2
+23,38,95444,Nurse,Los Angeles,Disease3|Disease4
+24,38,76734,Nurse,Miami,Disease7|Disease1|Disease2|Disease6
+25,43,63207,Engineer,Boston,Disease6|Disease3|Disease7
+26,23,53752,Lawyer,Miami,Disease4|Disease2
+27,38,41509,Nurse,Houston,Disease4|Disease6|Disease1
+28,23,72723,Lawyer,San Diego,Disease5|Disease6
+29,42,69666,Doctor,New York,Disease1|Disease2
+30,25,47274,Artist,Boston,Disease7|Disease6
+31,48,83550,Lawyer,San Diego,Disease1|Disease4
+32,38,80221,Engineer,New York,Disease2|Disease7
+33,22,49243,Engineer,Miami,Disease5|Disease4|Disease2|Disease7
+34,54,54490,Nurse,Miami,Disease4|Disease1|Disease6|Disease5
+35,40,67432,Scientist,Los Angeles,Disease1|Disease7
+36,35,72940,Nurse,Los Angeles,Disease6|Disease2|Disease5
+37,31,90782,Lawyer,San Diego,Disease5|Disease4|Disease1
+38,60,54747,Engineer,Miami,Disease4|Disease2
+39,38,54321,Nurse,Boston,Disease4|Disease6|Disease7|Disease5
+40,26,77199,Nurse,San Diego,Disease3|Disease1
+41,59,84666,Lawyer,New York,Disease4|Disease6|Disease3|Disease1
+42,27,94881,Engineer,Boston,Disease6|Disease5|Disease2|Disease7
+43,28,56881,Engineer,Miami,Disease5|Disease6
+44,50,73683,Artist,Houston,Disease4|Disease6
+45,56,68261,Artist,Los Angeles,Disease5|Disease2|Disease7
+46,36,99795,Doctor,New York,Disease4|Disease2
+47,22,81242,Doctor,New York,Disease6|Disease7
+48,38,83545,Doctor,Chicago,Disease7|Disease2|Disease5
+49,30,90859,Doctor,Miami,Disease1|Disease6|Disease2|Disease3
+50,28,54936,Engineer,Houston,Disease7|Disease2
+51,41,65680,Nurse,New York,Disease7|Disease5|Disease1|Disease6
+52,51,44339,Engineer,San Diego,Disease3|Disease1|Disease7
+53,50,88076,Engineer,Chicago,Disease6|Disease7|Disease3|Disease5
+54,40,90768,Scientist,San Diego,Disease1|Disease4|Disease6
+55,59,82615,Doctor,San Diego,Disease2|Disease1|Disease5|Disease4
+56,57,97477,Lawyer,New York,Disease5|Disease3|Disease6
+57,57,92913,Nurse,San Diego,Disease1|Disease6|Disease4
+58,24,60494,Engineer,Houston,Disease1|Disease7|Disease2|Disease4
+59,29,87645,Scientist,New York,Disease7|Disease4|Disease5|Disease1
+60,20,78296,Nurse,Chicago,Disease6|Disease1|Disease4
+61,60,79191,Lawyer,Chicago,Disease3|Disease7|Disease6|Disease4
+62,49,79203,Scientist,Houston,Disease3|Disease6|Disease7|Disease4
+63,39,96830,Teacher,New York,Disease5|Disease4|Disease1|Disease7
+64,58,44369,Engineer,Houston,Disease2|Disease1|Disease5|Disease3
+65,29,52968,Artist,Houston,Disease5|Disease7
+66,55,47521,Artist,Los Angeles,Disease1|Disease3
+67,43,90052,Artist,Boston,Disease4|Disease1|Disease3|Disease5
+68,60,54196,Nurse,Houston,Disease1|Disease7
+69,41,41080,Doctor,Boston,Disease6|Disease7|Disease1
+70,53,82368,Doctor,Boston,Disease6|Disease4
+71,28,53075,Doctor,Los Angeles,Disease7|Disease2|Disease3|Disease6
+72,33,92257,Artist,Los Angeles,Disease5|Disease6|Disease2|Disease3
+73,23,84177,Lawyer,Los Angeles,Disease1|Disease3|Disease7
+74,32,70110,Nurse,Los Angeles,Disease1|Disease4|Disease6
+75,49,72077,Doctor,San Diego,Disease6|Disease3|Disease7|Disease2
+76,29,99488,Doctor,San Diego,Disease5|Disease7
+77,40,58697,Engineer,Boston,Disease1|Disease7|Disease6|Disease4
+78,31,48851,Scientist,New York,Disease5|Disease2|Disease1
+79,32,81086,Lawyer,Miami,Disease6|Disease1
+80,59,66762,Artist,New York,Disease2|Disease5
+81,43,71236,Lawyer,New York,Disease1|Disease2|Disease4
+82,24,77471,Scientist,Houston,Disease2|Disease3|Disease5|Disease1
+83,59,99030,Artist,New York,Disease3|Disease5|Disease2
+84,46,63480,Doctor,Boston,Disease5|Disease1
+85,53,64375,Scientist,Los Angeles,Disease2|Disease5
+86,20,84052,Teacher,Los Angeles,Disease6|Disease7
+87,42,69705,Artist,San Diego,Disease6|Disease5
+88,37,90984,Engineer,San Diego,Disease5|Disease7|Disease1|Disease2
+89,60,80898,Artist,New York,Disease7|Disease1|Disease2
+90,55,98152,Engineer,Houston,Disease1|Disease2|Disease4
+91,44,49076,Lawyer,Miami,Disease5|Disease3|Disease6
+92,53,89111,Nurse,New York,Disease4|Disease1|Disease2|Disease6
+93,42,69479,Teacher,San Diego,Disease4|Disease6|Disease5|Disease7
+94,54,72148,Scientist,Los Angeles,Disease4|Disease5|Disease2|Disease7
+95,28,65599,Lawyer,Houston,Disease3|Disease2|Disease1|Disease7
+96,40,79460,Nurse,Chicago,Disease6|Disease5|Disease2|Disease1
+97,45,78737,Artist,Los Angeles,Disease5|Disease6|Disease4
+98,57,88406,Teacher,Boston,Disease7|Disease1|Disease4
+99,54,48608,Artist,San Diego,Disease4|Disease5|Disease7
+100,44,48514,Engineer,Boston,Disease7|Disease2|Disease1|Disease5

@@ -1,0 +1,11 @@
+ID,Name,Age,Gender,Disease_Set
+1,John Doe,30,Male,Hypertension| Diabetes
+2,Jane Smith,28,Female,Asthma
+3,Alex Johnson,35,Male,Hypertension| Asthma| Diabetes
+4,Emma Brown,40,Female,Diabetes
+5,Michael White,50,Male,Hypertension| Asthma
+6,Emily Davis,45,Female,Asthma| Diabetes
+7,James Wilson,25,Male,Hypertension
+8,Sophia Taylor,32,Female,Diabetes| Hypertension
+9,David Clark,38,Male,Asthma| Hypertension
+10,Olivia Martinez,29,Female,Hypertension| Diabetes
