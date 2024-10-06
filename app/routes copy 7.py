@@ -18,46 +18,35 @@ sdcmicro = importr('sdcMicro')
 def create_generalization_hierarchy(dataframe, quasi_identifiers, hierarchy_rules):
     hierarchies = {}
     for qi in quasi_identifiers:
+        unique_values = dataframe[qi].unique()
+
         if qi in hierarchy_rules:
             rule = hierarchy_rules[qi].lower()
             if rule == 'ordering':
                 min_val, max_val = dataframe[qi].min(), dataframe[qi].max()
-                unique_values = dataframe[qi].dropna().unique()
                 bins = np.linspace(min_val, max_val, num=min(len(unique_values), 4))
                 labels = [f"{int(bins[i])}-{int(bins[i+1])}" for i in range(len(bins)-1)]
                 hierarchy = {}
                 for val in unique_values:
+                    if pd.isna(val):
+                        continue
                     bin_index = np.digitize(val, bins) - 1
-                    bin_index = min(bin_index, len(labels) - 1)
+                    if bin_index >= len(labels):
+                        bin_index = len(labels) - 1
                     hierarchy[val] = labels[bin_index]
 
                 # 将空值回填为对应的分层区间
-                hierarchy['Masked'] = labels[0]  # 默认将空值分配到第一个区间
+                hierarchy[np.nan] = labels[0]  # 默认将空值分配到第一个区间
 
             elif rule == 'masking':
-                # 先填充 NaN 并转换为字符串
-                dataframe[qi] = dataframe[qi].fillna('Masked').astype(str)
-                
-                # 获取填充后的唯一值
-                unique_values = dataframe[qi].unique()
-                
-                # 应用 masking 规则
-                hierarchy = {
-                    val: (val[:-2] + '**' if len(val) > 2 and val != 'Masked' else 'Masked') 
-                    for val in unique_values
-                }
-
-                # 确保 'Masked' 被正确映射
-                hierarchy['Masked'] = 'Masked'
-
-                print(f"Hierarchy for {qi}: {hierarchy}")
-                print(f"DataFrame after masking for {qi}:")
-                print(dataframe[qi].head())
+                # 将最后两位替换为 **
+                hierarchy = {val: val[:-2] + '**' if isinstance(val, str) and len(val) > 2 else "Masked" for val in unique_values}
 
             elif rule == 'dates':
-                unique_values = dataframe[qi].unique()
+                # 将日期值转换为 datetime 类型
                 date_range = pd.to_datetime(unique_values, errors='coerce')
                 
+                # 构建按年份分组的分层
                 hierarchy = {}
                 for val in unique_values:
                     if pd.isna(val):
@@ -70,25 +59,28 @@ def create_generalization_hierarchy(dataframe, quasi_identifiers, hierarchy_rule
                 hierarchy[np.nan] = str(min_year)
 
             elif rule == 'category':
-                unique_values = dataframe[qi].unique()
+                # 自动将类别转换为 type1, type2, ..., 根据唯一值数量动态生成
                 hierarchy = {val: f"type{i+1}" for i, val in enumerate(unique_values) if pd.notna(val)}
-                hierarchy['Masked'] = "Unknown"
+                hierarchy[np.nan] = "Unknown"
+
         else:
             if np.issubdtype(dataframe[qi].dtype, np.number):
                 min_val, max_val = dataframe[qi].min(), dataframe[qi].max()
-                unique_values = dataframe[qi].dropna().unique()
                 bins = np.linspace(min_val, max_val, num=min(len(unique_values), 4))
                 labels = [f"{int(bins[i])}-{int(bins[i+1])}" for i in range(len(bins)-1)]
                 hierarchy = {}
                 for val in unique_values:
+                    if pd.isna(val):
+                        continue
                     bin_index = np.digitize(val, bins) - 1
-                    bin_index = min(bin_index, len(labels) - 1)
+                    if bin_index >= len(labels):
+                        bin_index = len(labels) - 1
                     hierarchy[val] = labels[bin_index]
 
                 # 回填空值为最接近的分层区间
-                hierarchy['Masked'] = labels[0]
+                hierarchy[np.nan] = labels[0]
+
             else:
-                unique_values = dataframe[qi].unique()
                 hierarchy = {val: "General Category" for val in unique_values}
 
         hierarchies[qi] = hierarchy
@@ -103,6 +95,7 @@ def apply_generalization(dataframe, hierarchies):
     print("Generalized DataFrame (after applying hierarchies):")
     print(generalized_df.head())
     return generalized_df
+
 def check_m_diversity(group, sensitive_column, m_value):
     sensitive_values = group[sensitive_column].values
     value_counts = Counter(sensitive_values)
